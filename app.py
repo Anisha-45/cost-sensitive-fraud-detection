@@ -134,7 +134,7 @@ CATEGORY_ENC = {cat: i for i, cat in enumerate(sorted(CATEGORIES))}
 @st.cache_resource(show_spinner=False)
 def load_model():
     """Load serialised model bundle. Returns (model, threshold, feature_list)."""
-    model_path = "outputs/best_model.pkl"
+    model_path = "best_model.pkl"
     if not os.path.exists(model_path):
         return None, None, None
     bundle = joblib.load(model_path)
